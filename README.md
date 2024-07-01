@@ -1,18 +1,24 @@
-Primeira API na linguagem GO
+---
 
+### Primeira API na linguagem GO
 
-Foi solicitado por meu professor uma API capaz de realizar cálculos matemáticos simples (adição, subtração, divisão e multiplicação).
+Este projeto consiste em uma API simples em Go capaz de realizar cálculos matemáticos básicos (adição, subtração, multiplicação e divisão).
 
-Em vista do que foi pedido, criei endpoints proporcionais ao que iriam realizar, que foram:
-|  "/adicao" - Adição                |
-|  "/subtracao" - Subtração          |
-|  "/multiplicacao" - Multiplicação  |
-|  "/divisao" - Divisão              |
+#### Endpoints disponíveis:
 
-Além disso incrementei endpoints para visualização desses endpoints que foi o "/home" e a mais, endpoints para ver o total e para excluir os números digitados em determinada sessão.
+- `/adicao`: Realiza a adição de um número à lista de números armazenados.
+- `/subtracao`: Realiza a subtração de um número da lista de números armazenados.
+- `/multiplicacao`: Realiza a multiplicação de todos os números armazenados por um número.
+- `/divisao`: Realiza a divisão de todos os números armazenados por um número.
+- `/total`: Retorna o total dos números armazenados.
+- `/limpar`: Limpa a lista de números armazenados.
 
-|  "/total" - Total                  |
+#### Funcionamento:
 
-|  "/limpar" - Delete                |
+A API espera um corpo de requisição no formato JSON contendo um número para realizar as operações de adição, subtração, multiplicação ou divisão. Os números são armazenados até que sejam limpos através do endpoint `/limpar`.
 
-O programa solicita em um corpo com formatação JSON, um número, a cada envio, o número é armazenado na determinada função, até que o usuário encerre o programa ou delete os números informados!
+### Uso:
+
+Para utilizar a API, envie requisições HTTP para os endpoints listados acima, especificando o número desejado no corpo da requisição em formato JSON.
+
+---
